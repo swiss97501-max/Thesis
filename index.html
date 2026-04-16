@@ -9,58 +9,49 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen bg-[#fafafa]">
+<body class="min-h-screen bg-[#fcfcfc] text-[#1a1a1a]">
 
-    <nav class="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div class="flex items-center gap-3">
-            <svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="200" rx="40" fill="#1d4ed8"/> <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF">SW</text>
-            </svg>
-            <span class="font-bold text-gray-900 tracking-tight text-lg">Swiss.R</span>
+    <header class="border-b border-gray-200 bg-white">
+        <div class="container mx-auto max-w-4xl px-6 py-8">
+            <h1 class="text-3xl font-serif font-bold tracking-tight text-[#002147]">
+                Swiss Russameekiattisak
+            </h1>
+            <p class="mt-2 text-sm uppercase tracking-[0.2em] text-gray-500 font-medium">
+                Mathematics & Physics Repository
+            </p>
+        </div>
+    </header>
+
+    <nav class="bg-[#002147] text-white">
+        <div class="container mx-auto max-w-4xl px-6 py-3 flex justify-between items-center text-sm">
+            <div class="flex gap-6">
+                <span class="opacity-80">Research Portfolio</span>
+            </div>
+            <a href="https://figshare.com/authors/Swiss_Russameekiattisak/21988793" target="_blank" class="hover:underline flex items-center gap-1">
+                Figshare Profile <i data-lucide="external-link" class="h-3 w-3"></i>
+            </a>
         </div>
     </nav>
 
-    <section class="bg-[#1d4ed8] px-6 py-16 md:py-24 text-white">
-        <div class="container mx-auto max-w-4xl text-center">
-            <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm text-white">
-                <i data-lucide="book-open" class="h-4 w-4"></i>
-                <span class="font-medium">Academic Repository</span>
-            </div>
-            <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-4">
-                Swiss Russameekiattisak
-            </h1>
-            <p class="mx-auto max-w-2xl text-lg text-blue-100 leading-relaxed font-light">
-                A collection of theses and presentations in mathematics, physics, and theoretical frameworks.
-            </p>
-            <a href="https://figshare.com/authors/Swiss_Russameekiattisak/21988793" 
-               target="_blank" 
-               class="mt-8 inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium transition-all hover:bg-white/20">
-                View on Figshare
-                <i data-lucide="external-link" class="h-4 w-4"></i>
-            </a>
-        </div>
-    </section>
-
-    <main class="container mx-auto max-w-4xl px-6 py-16">
-        <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-gray-100 pb-6">
-            <h2 class="text-2xl font-bold text-gray-900">
-                Publications
-                <span id="publication-count" class="ml-2 text-base font-normal text-gray-400"></span>
-            </h2>
+    <main class="container mx-auto max-w-4xl px-6 py-12">
+        <section class="mb-12">
+            <h2 class="text-xl font-serif font-bold border-b-2 border-[#002147] pb-2 mb-6">Publications & Technical Frameworks</h2>
             
-            <div class="flex flex-wrap items-center gap-2">
-                <i data-lucide="filter" class="h-4 w-4 text-gray-400"></i>
-                <button data-filter="All" class="filter-btn active">All</button>
-                <button data-filter="Thesis" class="filter-btn">Thesis</button>
-                <button data-filter="Presentation" class="filter-btn">Presentation</button>
+            <div class="flex flex-wrap items-center gap-4 mb-8">
+                <span class="text-xs font-bold uppercase text-gray-400">Filter by:</span>
+                <button data-filter="All" class="filter-btn active">All Records</button>
+                <button data-filter="Thesis" class="filter-btn">Theses</button>
+                <button data-filter="Presentation" class="filter-btn">Presentations</button>
             </div>
-        </div>
 
-        <div id="publications-container" class="grid gap-5"></div>
+            <div id="publications-container" class="space-y-8"></div>
+        </section>
     </main>
 
-    <footer class="border-t border-gray-100 px-6 py-12 text-center text-sm text-gray-400 bg-white">
-        <p>© <span id="year"></span> Swiss Russameekiattisak. All rights reserved.</p>
+    <footer class="border-t border-gray-200 bg-gray-50 px-6 py-10">
+        <div class="container mx-auto max-w-4xl text-center text-xs text-gray-500 uppercase tracking-widest">
+            <p>© <span id="year"></span> Swiss Russameekiattisak. Formal Archive.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
