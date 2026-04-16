@@ -77,21 +77,21 @@ function renderPublications() {
 
     sorted.forEach(pub => {
         const card = document.createElement('div');
-        card.className = "pub-card group p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-black transition-all duration-300";
+        card.className = "pub-card group p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-blue-600 transition-all duration-300";
         card.innerHTML = `
             <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-2">
-                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-100 text-gray-600 uppercase tracking-widest">${pub.type}</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 uppercase tracking-widest">${pub.type}</span>
                     <span class="text-[10px] text-gray-400 font-medium">${new Date(pub.posted_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 leading-tight">${pub.title}</h3>
+                <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors leading-tight">${pub.title}</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mt-1 font-light">${pub.description}</p>
                 <div class="mt-4 flex flex-wrap gap-6">
-                    <a href="${pub.public_url}" target="_blank" class="text-[11px] font-bold text-black uppercase tracking-[0.15em] inline-flex items-center gap-1.5 hover:opacity-50 transition-opacity">
+                    <a href="${pub.public_url}" target="_blank" class="text-[11px] font-bold text-blue-700 uppercase tracking-[0.15em] inline-flex items-center gap-1.5 hover:opacity-70 transition-opacity">
                         Figshare <i data-lucide="external-link" class="h-3 w-3"></i>
                     </a>
-                    <a href="${pub.pdf_url}" target="_blank" class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.15em] inline-flex items-center gap-1.5 hover:text-black transition-colors">
-                        PDF Download <i data-lucide="arrow-down-to-line" class="h-3 w-3"></i>
+                    <a href="${pub.pdf_url}" target="_blank" class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.15em] inline-flex items-center gap-1.5 hover:text-blue-700 transition-colors">
+                        Full Text PDF <i data-lucide="file-text" class="h-3 w-3"></i>
                     </a>
                 </div>
             </div>
