@@ -5,12 +5,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Filter Button Styles */
+/* Filter Button Styles (Blue Version) */
 .filter-btn {
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.875rem;
     font-size: 0.875rem;
     font-weight: 500;
-    border-radius: 0.375rem;
+    border-radius: 0.5rem;
     background-color: #f3f4f6;
     color: #4b5563;
     transition: all 0.2s;
@@ -21,20 +21,18 @@ body {
 }
 
 .filter-btn.active {
-    background-color: #000000;
+    background-color: #1d4ed8;
     color: #ffffff;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
 }
 
-/* Card Hover Animation */
-.pub-card {
-    cursor: pointer;
-}
-
+/* Card Interaction */
 .pub-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
 }
 
-/* Scrollbar Style */
+/* Smooth Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -42,9 +40,9 @@ body {
     background: #fafafa;
 }
 ::-webkit-scrollbar-thumb {
-    background: #e5e7eb;
+    background: #bfdbfe;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #d1d5db;
+    background: #1d4ed8;
 }
